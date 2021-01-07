@@ -231,7 +231,8 @@ void steamvr::data(double* data)
         auto [ok, pose] = device_list::get_pose(device_index);
         if (ok)
         {
-            constexpr int c = 10;
+            // Convert metric values to centimeter values
+            constexpr int c = 100;
 
             const auto& result = pose.mDeviceToAbsoluteTracking;
 
