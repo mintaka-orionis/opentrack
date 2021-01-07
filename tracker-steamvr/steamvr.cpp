@@ -93,8 +93,10 @@ void device_list::fill_device_specs(QList<device_spec>& list)
                 dev.type = "HMD"; break;
             case vr::ETrackedDeviceClass::TrackedDeviceClass_Controller:
                 dev.type = "Controller"; break;
-            case vr::ETrackedDeviceClass::TrackedDeviceClass_TrackingReference:
+            case vr::ETrackedDeviceClass::TrackedDeviceClass_GenericTracker:
                 dev.type = "Tracker"; break;
+            case vr::ETrackedDeviceClass::TrackedDeviceClass_TrackingReference:
+                dev.type = "Base Station"; break;
             default:
                 dev.type = "Unknown"; break;
             }
